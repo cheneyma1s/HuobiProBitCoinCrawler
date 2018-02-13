@@ -146,7 +146,7 @@ namespace NetDimension.NanUI
                 Console.WriteLine($"[DB][ERROR]{ex.Message.Replace("\n", " ").Replace("\r", " ")}");
                 try
                 {
-                    System.IO.File.AppendAllText(System.Environment.CurrentDirectory + $"/error{DateTime.Now.ToString("yyyyMMdd")}.log", $"[DB][ERROR]{ex.Message.Replace("\n", " ").Replace("\r", " ")}\r\n");
+                    System.IO.File.AppendAllText($"{System.Environment.CurrentDirectory}/error{DateTime.Now.ToString("yyyyMMdd")}.log", $"[DB][ERROR]{ex.Message.Replace("\n", " ").Replace("\r", " ")}\r\n");
                 }
                 catch
                 {
